@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy</title>
+    <link rel="shortcut icon" href="./images/logo.webp" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- ! Font Awesome -->
+    <script src="https://kit.fontawesome.com/b9757d8d64.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="primary-font">
+    <header class="sticky top-0 shadow-lg bg-white  md:py-4">
+        <nav class="w-11/12 mx-auto">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <!-- ! Small Device -->
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            <li><a>Home</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-2xl font-extrabold"><img src="./images/logo.webp" alt="">Peedy</a>
+                </div>
+                <!-- ! Large Device -->
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-xl ">
+                        <li><a>Home</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <i class="fa-solid fa-user border rounded-full px-3 py-2 text-xl"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+
+
+    </section>
+<div id="loading-spinner" class="hidden">
+    <div class="spinner"></div>
+</div>
+    <main>
+        <!--! Hero Section Starts -->
+        <section class="w-11/12 xl:w-7/12 2xl:w-4/12  mx-auto text-center space-y-4 py-8">
+            <p class="secondary-text-color text-2xl">Bringing Families Together ❤️‍🔥</p>
+            <h1 class="text-4xl lg:text-7xl font-bold">Your Path to Adoption Starts Here</h1>
+            <p>wagging tails and purring companions await! Dive into our detailed pet profiles and discover your new
+                best friend today. Every adoption story is a tale of second chances and newfound love. 🐾❤️</p>
+            <a class="btn btn-color text-white hover:text-black" href="#category-container">View More</a>
+            <img src="./images/pet.webp" alt="">
+            <h2 class="text-4xl font-bold">Adopt Your Best Friend</h2>
+            <p class="">
+                Find joy with a new pet on our adoption site! Navigate to ensure a perfect match, offering love and
+                second chances.</p>
+
+        </section>
+        <!--! Hero Section End -->
+        <!--! Category Section Starts -->
+        <section class="w-11/12 mx-auto">
+            <div id="category-container" class=" flex flex-wrap justify-center items-center py-4 gap-8"> </div>
+
+
+            <div class="flex justify-between items-center mt-4">
+                <p class="text-xl md:text-2xl font-semibold">Best Deal For You</p>
+                <button id="sort-by-price" class="btn-color btn text-white hover:text-black">Sort by Price</button>
+            </div>
+
+            <!-- Best Deal Card Start -->
+            <div id="pets-grid-section" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-4">
+                <!-- Left -->
+                <div class="col-span-3">
+                    <div id="pets-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-4 lg:pr-4 ">
+                        <!--! pets-container -->
+                    </div>
+                </div>
+
+
+                <!-- Right -->
+                <div class="col-span-1 border p-2 rounded-lg ">
+                    <div id="thumbs-up-container" class="grid grid-cols-2 gap-2">
+                    </div>
+                </div>
+            </div>
+
+            <div id="no-content"> </div>
+
+            <!-- Best Deal Card End -->
+        </section>
+        <!--! Category Section End -->
+
+        <!-- ! Modal Section start -->
+        <button class="btn hidden" onclick="customModal.showModal()">open modal</button>
+        <dialog id="customModal" class="modal">
+            <div class="modal-box">
+                <form method="dialog">
+                    <button
+                        class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 bg-orange-500 text-white">✕</button>
+                </form>
+                <div id="modal-container">
+                    <!-- Modal Content -->
+                </div>
+            </div>
+        </dialog>
+        <!-- ! Modal Section End-->
+
+
+    </main>
+
+    <!-- ! Footer Start -->
+    <footer class="bg-black">
+        <nav class="w-11/12 mx-auto lg:flex justify-between space-y-8 lg:py-20 ">
+
+            <!-- Left -->
+            <div class="text-white space-y-3">
+                <a class="btn btn-ghost text-2xl font-extrabol"><img src="./images/logo.webp" alt="">Peedy</a>
+                <p>Location: av. Washington 165, NY CA 54003 <br>
+                    Phone: +31 85 964 47 25 <br>
+                    Email: info@yourdomain.com <br>
+                    Openings hours: 9.00 AM - 5.00 PM</p>
+                <div class="space-x-3 text-xl ">
+                    <i class="fa-brands fa-facebook hover:text-red-400"></i>
+                    <i class="fa-brands fa-twitter hover:text-red-400"></i>
+                    <i class="fa-brands fa-youtube hover:text-red-400"></i>
+                    <i class="fa-brands fa-instagram hover:text-red-400"></i>
+                </div>
+            </div>
+
+            <!--  Middle -->
+            <div class="flex flex-col text-white space-y-2">
+                <h3>Useful Links</h3>
+                <a href="">Home</a>
+                <a href="">About Us</a>
+                <a href=""> Animals</a>
+                <a href="">Foundation</a>
+                <a href="">Contact</a>
+            </div>
+
+            <!--  Right -->
+            <div class="space-y-2">
+                <h3 class="text-white">Drop a Message</h3>
+                <div class="flex flex-col gap-2">
+                    <input type="text" placeholder="Enter Your Email"
+                        class="input input-bordered input-primary w-full max-w-xs " />
+                    <button
+                        class="btn w-full max-w-xs btn-color text-white hover:text-black border-none">Subscribe</button>
+                </div>
+            </div>
+        </nav>
+    </footer>
+    <!-- ! Footer End -->
+
+
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
